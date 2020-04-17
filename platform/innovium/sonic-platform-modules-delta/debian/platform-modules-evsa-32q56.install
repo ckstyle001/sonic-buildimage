@@ -1,0 +1,3 @@
+evsa-32q56/cfg/evsa-32q56-modules.conf etc/modules-load.d
+evsa-32q56/scripts/evsa-32q56_platform_init.sh usr/local/bin
+systemd/platform-modules-evsa-32q56.service lib/systemd/system
