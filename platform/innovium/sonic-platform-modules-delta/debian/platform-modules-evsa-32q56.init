@@ -14,12 +14,14 @@
 case "$1" in
 start)
     echo -n "Setting up board... "
+    rmmod at24
     rmmod ipmi_si
     rmmod ipmi_msghandler
     modprobe ipmi_devintf
     modprobe ipmi_si ports=0xca2
     modprobe ipmi_msghandler
     modprobe optoe
+    modprobe delta_at24
     modprobe delta_evsa-32q56_platform
 
     /usr/local/bin/evsa-32q56_platform_init.sh

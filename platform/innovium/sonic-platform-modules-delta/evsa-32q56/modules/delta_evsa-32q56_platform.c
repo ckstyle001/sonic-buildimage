@@ -252,7 +252,7 @@ static struct i2c_device_platform_data evsa_32q56_i2c_device_platform_data[] = {
     {
         // id eeprom (0x56)
         .parent = 0,
-        .info = { I2C_BOARD_INFO("24c02", 0x56) },
+        .info = { I2C_BOARD_INFO("24c128-delta", 0x56) },
         .client = NULL,
     },
     {
