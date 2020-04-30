@@ -8,7 +8,7 @@
 # Should-Stop:
 # Default-Start:     S
 # Default-Stop:      0 6
-# Short-Description: Setup evsa-32q56 board.
+# Short-Description: Setup evs-a-32q56 board.
 ### END INIT INFO
 
 case "$1" in
@@ -22,9 +22,9 @@ start)
     modprobe ipmi_msghandler
     modprobe optoe
     modprobe delta_at24
-    modprobe delta_evsa-32q56_platform
+    modprobe delta_evs-a-32q56_platform
 
-    /usr/local/bin/evsa-32q56_platform_init.sh
+    /usr/local/bin/evs-a-32q56_platform_init.sh
     echo "done."
     ;;
 
@@ -38,7 +38,7 @@ force-reload|restart)
     ;;
 
 *)
-    echo "Usage: /etc/init.d/platform-modules-evsa-32q56.init {start|stop}"
+    echo "Usage: /etc/init.d/platform-modules-evs-a-32q56.init {start|stop}"
     exit 1
     ;;
 esac

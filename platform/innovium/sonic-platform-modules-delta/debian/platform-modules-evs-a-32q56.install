@@ -1,0 +1,3 @@
+evs-a-32q56/cfg/evs-a-32q56-modules.conf etc/modules-load.d
+evs-a-32q56/scripts/evs-a-32q56_platform_init.sh usr/local/bin
+systemd/platform-modules-evs-a-32q56.service lib/systemd/system

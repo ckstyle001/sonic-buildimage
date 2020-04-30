@@ -248,7 +248,7 @@ struct i2c_device_platform_data {
     struct i2c_client *client;
 };
 
-static struct i2c_device_platform_data evsa_32q56_i2c_device_platform_data[] = {
+static struct i2c_device_platform_data evs_a_32q56_i2c_device_platform_data[] = {
     {
         // id eeprom (0x56)
         .parent = 0,
@@ -461,51 +461,51 @@ static struct i2c_device_platform_data evsa_32q56_i2c_device_platform_data[] = {
     },
 };
 
-#define evsa_32q56_i2c_device_num(NUM){    \
-    .name = "delta-evsa-32q56-i2c-device", \
+#define evs_a_32q56_i2c_device_num(NUM){    \
+    .name = "delta-evs-a-32q56-i2c-device", \
     .id   = NUM,                           \
     .dev  = {                              \
-        .platform_data = &evsa_32q56_i2c_device_platform_data[NUM], \
+        .platform_data = &evs_a_32q56_i2c_device_platform_data[NUM], \
         .release       = device_release,   \
     },                                     \
 }
 
-static struct platform_device evsa_32q56_i2c_device[] = {
-    evsa_32q56_i2c_device_num(0),
-    evsa_32q56_i2c_device_num(1),
-    evsa_32q56_i2c_device_num(2),
-    evsa_32q56_i2c_device_num(3),
-    evsa_32q56_i2c_device_num(4),
-    evsa_32q56_i2c_device_num(5),
-    evsa_32q56_i2c_device_num(6),
-    evsa_32q56_i2c_device_num(7),
-    evsa_32q56_i2c_device_num(8),
-    evsa_32q56_i2c_device_num(9),
-    evsa_32q56_i2c_device_num(10),
-    evsa_32q56_i2c_device_num(11),
-    evsa_32q56_i2c_device_num(12),
-    evsa_32q56_i2c_device_num(13),
-    evsa_32q56_i2c_device_num(14),
-    evsa_32q56_i2c_device_num(15),
-    evsa_32q56_i2c_device_num(16),
-    evsa_32q56_i2c_device_num(17),
-    evsa_32q56_i2c_device_num(18),
-    evsa_32q56_i2c_device_num(19),
-    evsa_32q56_i2c_device_num(20),
-    evsa_32q56_i2c_device_num(21),
-    evsa_32q56_i2c_device_num(22),
-    evsa_32q56_i2c_device_num(23),
-    evsa_32q56_i2c_device_num(24),
-    evsa_32q56_i2c_device_num(25),
-    evsa_32q56_i2c_device_num(26),
-    evsa_32q56_i2c_device_num(27),
-    evsa_32q56_i2c_device_num(28),
-    evsa_32q56_i2c_device_num(29),
-    evsa_32q56_i2c_device_num(30),
-    evsa_32q56_i2c_device_num(31),
-    evsa_32q56_i2c_device_num(32),
-    evsa_32q56_i2c_device_num(33),
-    evsa_32q56_i2c_device_num(34),
+static struct platform_device evs_a_32q56_i2c_device[] = {
+    evs_a_32q56_i2c_device_num(0),
+    evs_a_32q56_i2c_device_num(1),
+    evs_a_32q56_i2c_device_num(2),
+    evs_a_32q56_i2c_device_num(3),
+    evs_a_32q56_i2c_device_num(4),
+    evs_a_32q56_i2c_device_num(5),
+    evs_a_32q56_i2c_device_num(6),
+    evs_a_32q56_i2c_device_num(7),
+    evs_a_32q56_i2c_device_num(8),
+    evs_a_32q56_i2c_device_num(9),
+    evs_a_32q56_i2c_device_num(10),
+    evs_a_32q56_i2c_device_num(11),
+    evs_a_32q56_i2c_device_num(12),
+    evs_a_32q56_i2c_device_num(13),
+    evs_a_32q56_i2c_device_num(14),
+    evs_a_32q56_i2c_device_num(15),
+    evs_a_32q56_i2c_device_num(16),
+    evs_a_32q56_i2c_device_num(17),
+    evs_a_32q56_i2c_device_num(18),
+    evs_a_32q56_i2c_device_num(19),
+    evs_a_32q56_i2c_device_num(20),
+    evs_a_32q56_i2c_device_num(21),
+    evs_a_32q56_i2c_device_num(22),
+    evs_a_32q56_i2c_device_num(23),
+    evs_a_32q56_i2c_device_num(24),
+    evs_a_32q56_i2c_device_num(25),
+    evs_a_32q56_i2c_device_num(26),
+    evs_a_32q56_i2c_device_num(27),
+    evs_a_32q56_i2c_device_num(28),
+    evs_a_32q56_i2c_device_num(29),
+    evs_a_32q56_i2c_device_num(30),
+    evs_a_32q56_i2c_device_num(31),
+    evs_a_32q56_i2c_device_num(32),
+    evs_a_32q56_i2c_device_num(33),
+    evs_a_32q56_i2c_device_num(34),
 };
 /* ---------------- I2C device - end ------------- */
 
@@ -562,7 +562,7 @@ static struct platform_driver i2c_device_driver = {
     .remove = __exit_p(i2c_deivce_remove),
     .driver = {
         .owner = THIS_MODULE,
-        .name  = "delta-evsa-32q56-i2c-device",
+        .name  = "delta-evs-a-32q56-i2c-device",
     }
 };
 /* ---------------- I2C driver - end ------------- */
@@ -585,7 +585,7 @@ struct virtual_mux {
     struct virtual_mux_platform_data    data;
 };
 
-static struct virtual_mux_platform_data evsa_32q56_port_mux_platform_data[] = {
+static struct virtual_mux_platform_data evs_a_32q56_port_mux_platform_data[] = {
     {
         .parent         = BUS0,
         .base_nr        = PORT_SFP_BASE_NUM,
@@ -621,42 +621,42 @@ static struct virtual_mux_platform_data evsa_32q56_port_mux_platform_data[] = {
 static struct platform_device port_mux_device[] =
 {
     {
-        .name = "delta-evsa-32q56-port-mux",
+        .name = "delta-evs-a-32q56-port-mux",
         .id   = 0,
         .dev  = {
-            .platform_data  = &evsa_32q56_port_mux_platform_data[0],
+            .platform_data  = &evs_a_32q56_port_mux_platform_data[0],
             .release        = device_release,
         },
     },
     {
-        .name = "delta-evsa-32q56-port-mux",
+        .name = "delta-evs-a-32q56-port-mux",
         .id   = 1,
         .dev  = {
-            .platform_data  = &evsa_32q56_port_mux_platform_data[1],
+            .platform_data  = &evs_a_32q56_port_mux_platform_data[1],
             .release        = device_release,
         },
     },
     {
-        .name = "delta-evsa-32q56-port-mux",
+        .name = "delta-evs-a-32q56-port-mux",
         .id   = 2,
         .dev  = {
-            .platform_data  = &evsa_32q56_port_mux_platform_data[2],
+            .platform_data  = &evs_a_32q56_port_mux_platform_data[2],
             .release        = device_release,
         },
     },
     {
-        .name = "delta-evsa-32q56-port-mux",
+        .name = "delta-evs-a-32q56-port-mux",
         .id   = 3,
         .dev  = {
-            .platform_data  = &evsa_32q56_port_mux_platform_data[3],
+            .platform_data  = &evs_a_32q56_port_mux_platform_data[3],
             .release        = device_release,
         },
     },
     {
-        .name = "delta-evsa-32q56-port-mux",
+        .name = "delta-evs-a-32q56-port-mux",
         .id   = 4,
         .dev  = {
-            .platform_data  = &evsa_32q56_port_mux_platform_data[4],
+            .platform_data  = &evs_a_32q56_port_mux_platform_data[4],
             .release        = device_release,
         },
     },
@@ -854,13 +854,13 @@ static struct platform_driver port_mux_driver = {
     .remove = __exit_p(port_mux_remove), /* TODO */
     .driver = {
         .owner = THIS_MODULE,
-        .name  = "delta-evsa-32q56-port-mux",
+        .name  = "delta-evs-a-32q56-port-mux",
     },
 };
 /* ---------------- MUX - end ------------- */
 
 /* ---------------- module initialization ------------- */
-static int __init delta_evsa_32q56_platform_init(void)
+static int __init delta_evs_a_32q56_platform_init(void)
 {
     struct virtual_mux_platform_data *cpld_mux_pdata;
     struct cpld_platform_data        *syspld_pdata;
@@ -871,7 +871,7 @@ static int __init delta_evsa_32q56_platform_init(void)
     int ret,i = 0;
 
     mutex_init(&dni_lock);
-    printk(KERN_INFO "delta-evsa-32q56-platform module initialization\n");
+    printk(KERN_INFO "delta-evs-a-32q56-platform module initialization\n");
 
     ret = dni_ipmi_create_user();
     if (ret != 0) {
@@ -893,7 +893,7 @@ static int __init delta_evsa_32q56_platform_init(void)
     }
 
     // link the port cpld and the Mux
-    // port_cpld_pdata = evsa_32q56_port_cpld_platform_data;
+    // port_cpld_pdata = evs_a_32q56_port_cpld_platform_data;
     for (i = 0; i < ARRAY_SIZE(port_mux_device); i++)
     {
         // port_mux_pdata = port_mux_device[i].dev.platform_data;
@@ -901,31 +901,31 @@ static int __init delta_evsa_32q56_platform_init(void)
         ret = platform_device_register(&port_mux_device[i]);
         if (ret) {
             printk(KERN_WARNING "Fail to create port mux %d\n", i);
-            goto error_evsa_32q56_port_mux;
+            goto error_evs_a_32q56_port_mux;
         }
     }
 
-    for (i = 0; i < ARRAY_SIZE(evsa_32q56_i2c_device); i++)
+    for (i = 0; i < ARRAY_SIZE(evs_a_32q56_i2c_device); i++)
     {
-        ret = platform_device_register(&evsa_32q56_i2c_device[i]);
+        ret = platform_device_register(&evs_a_32q56_i2c_device[i]);
         if (ret)
         {
             printk(KERN_WARNING "Fail to create i2c device %d\n", i);
-            goto error_evsa_32q56_i2c_device;
+            goto error_evs_a_32q56_i2c_device;
         }
     }
 
-    printk("Initial delta_evsa_32q56_platform driver......[Success]\n");
+    printk("Initial delta_evs_a_32q56_platform driver......[Success]\n");
 
     return 0;
 
-error_evsa_32q56_i2c_device:
+error_evs_a_32q56_i2c_device:
     i--;
     for (; i >= 0; i--) {
-        platform_device_unregister(&evsa_32q56_i2c_device[i]);
+        platform_device_unregister(&evs_a_32q56_i2c_device[i]);
     }
     i = ARRAY_SIZE(port_mux_device);
-error_evsa_32q56_port_mux:
+error_evs_a_32q56_port_mux:
     i--;
     for (; i >= 0; i--) {
         platform_device_unregister(&port_mux_device[i]);
@@ -934,16 +934,16 @@ error_evsa_32q56_port_mux:
 error_i2c_device_driver:
     platform_driver_unregister(&port_mux_driver);
 error_port_mux_driver:
-    printk("Initial delta_evsa_32q56_platform driver......[Fail]\n");
+    printk("Initial delta_evs_a_32q56_platform driver......[Fail]\n");
     return ret;
 }
 
-static void __exit delta_evsa_32q56_platform_exit(void)
+static void __exit delta_evs_a_32q56_platform_exit(void)
 {
     int i = 0;
 
-    for (i = 0; i < ARRAY_SIZE(evsa_32q56_i2c_device); i++) {
-        platform_device_unregister(&evsa_32q56_i2c_device[i]);
+    for (i = 0; i < ARRAY_SIZE(evs_a_32q56_i2c_device); i++) {
+        platform_device_unregister(&evs_a_32q56_i2c_device[i]);
     }
 
     for (i = 0; i < ARRAY_SIZE(port_mux_device); i++) {
@@ -953,11 +953,11 @@ static void __exit delta_evsa_32q56_platform_exit(void)
     platform_driver_unregister(&i2c_device_driver);
     platform_driver_unregister(&port_mux_driver);
     
-    printk("Remove delta_evsa_32q56_platform driver......[Success]\n");
+    printk("Remove delta_evs_a_32q56_platform driver......[Success]\n");
 }
 
-module_init(delta_evsa_32q56_platform_init);
-module_exit(delta_evsa_32q56_platform_exit);
+module_init(delta_evs_a_32q56_platform_init);
+module_exit(delta_evs_a_32q56_platform_exit);
 
 MODULE_DESCRIPTION("DELTA EVS-A-32Q56 Platform Support");
 MODULE_AUTHOR("Jim Lee <jim.lee@deltaww.com>");
